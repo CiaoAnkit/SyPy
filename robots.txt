@@ -1,0 +1,10 @@
+Sitemap: https://sypy.iiit.ac.in/sitemap.xml
+User-agent: AhrefsBot
+Disallow: /
+
+User-Agent: *
+Disallow: /icons/
+Disallow: /images/
+Disallow: /js/
+Disallow: /pictures/
+Disallow: /styles/
