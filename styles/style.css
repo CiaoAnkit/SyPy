@@ -1,10 +1,10 @@
 html{
-  font-size: 18px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
 body{
+  font-size: 18px;
   background-color: #fffff8;
   color: #162A65;
   font-family: 'Courier';
@@ -228,22 +228,12 @@ hr{
   display: inline-block;
   height: 50px;
   margin: 1px 10px;
-  border-radius: 5px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #808080;
-  padding: 2px;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  -moz-transition: box-shadow 0.3s ease-in-out;
-  -ms-transition: box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
+  color: #162A65;
+  border-radius: 10px;
+  border: 1px solid;
+  box-shadow: 0 2px 4px #162A6580, 0 4px 5px #162A6580, 0 1px 10px #162A6580;
+  padding: 3px;  
 }
-
-.media_thumbnail:hover{
-  box-shadow: 0 5px 20px #2C3E50;
-}
-
 
 
 /* Font awesome */
