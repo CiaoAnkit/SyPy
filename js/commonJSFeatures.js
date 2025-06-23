@@ -40,7 +40,7 @@ document.getElementById("logoArea").innerHTML +=  "\
 /* Footer Begins */
 	var update_date = "";
 	const today = new Date();
-	update_date = "May 27, 2025";
+	update_date = "June 23, 2025";
 
 	document.getElementById("footer").innerHTML +=  "\
 	Last updated on " + update_date + "\
