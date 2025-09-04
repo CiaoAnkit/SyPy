@@ -43,9 +43,11 @@ document.getElementById("logoArea").innerHTML +=  "\
 	update_date = "July 05, 2025";
 
 	document.getElementById("footer").innerHTML +=  "\
-	Last updated on " + update_date + "\
-	<br>\
+	<!--Last updated on " + update_date + "\
+	<br>-->\
 	SyPy\ &#169; " + today.getFullYear() + "\
+	<br>\
+	Vindhya A3, IIIT-H, 500032 Hyderabad, India\
 	\
 	\
 	\
