@@ -1,0 +1,162 @@
+<html>
+   <head>
+      <title>Federal Government -  C&C</title>
+   </head>
+   <style>
+      @font-face {
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(https://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+      }
+      body {
+      font-family: Source Code Pro;
+      background:#000;
+      color: #00FF00;
+      margin:0;
+      font-size: 15px;
+      }
+      canvas {
+      display: none;
+      position:absolute;
+      top:0;
+      left:0;
+      }
+      .anim2{
+      display: none;
+      left:66.6%;
+      }
+      .output-console {
+      overflow:hidden;
+      }
+      p{margin:0}
+   </style>
+   <body>
+      <h1>
+         <center>WARNING<br><p id="ip-address"></p></center>
+      </h1>
+      [!] URGENT - OFFICIAL NOTIFICATION [!]<br>
+      <br>
+      This is a formal warning from the Global Cybercrime Resolution Taskforce (GCRT).<br>
+      <br>
+      Your IP address has been flagged in connection with the access and distribution of illicit digital contraband. This device's activity log has been recorded and submitted as evidence under docket #GCRT-SEC9-77401.<br>
+      <br>
+      CASE DETAILS:<br>
+      <!--<p id="ip-address">- IP address: </p>-->
+      - Violation: International Digital Trafficking Act (Sec. 2.1a)<br>
+      - Status: PENDING INVESTIGATION<br>
+      - Action Required: NONE. Do not attempt to disconnect or power off this device.<br>
+      <br>
+      An official will contact you within 72 business hours.<br>
+      ======================================================<br>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+             fetch("https://api.ipify.org/?format=json")
+                 .then(response => response.json())
+                 .then(data => {
+                     //document.getElementById("ip-address").textContent = "- IP address: "+(data.ip);
+                     document.getElementById("ip-address").textContent = "Your IP: "+(data.ip);
+                 })
+                 .catch(error => {
+                     console.error("Error fetching IP address:", error);
+                 });
+         });
+      </script>
+      <canvas class='anim'></canvas>
+      <canvas class='anim2'></canvas>
+      <div class="output-console"></div>
+      <script>
+         var canvas = document.querySelector(".anim"),
+           outputConsole = document.querySelector(".output-console");
+         
+         outputConsole.style.height = (window.innerHeight / 3) * 2 + 'px';
+         outputConsole.style.top = window.innerHeight / 3 + 'px'
+         
+         var commandStart = ['Performing DNS Lookups for', 
+                       'Searching ', 
+                       'Analyzing ', 
+                       'Estimating Approximate Location of ', 
+                       'Compressing ', 
+                       'Requesting Authorization From : ', 
+                       'wget -a -t ', 
+                       'tar -xzf ', 
+                       'Entering Location ', 
+                       'Compilation Started of ',
+                        'Downloading '],
+           commandParts = ['Data Structure', 
+                           'http://wwjd.com?au&2', 
+                           'Texture', 
+                           'TPS Reports', 
+                           ' .... Searching ... ', 
+                           'http://zanb.se/?23&88&far=2', 
+                           'http://ab.ret45-33/?timing=1ww'],
+           commandResponses = ['Authorizing ', 
+                        'Authorized...', 
+                        'Access Granted..', 
+                        'Going Deeper....', 
+                        'Compression Complete.', 
+                        'Compilation of Data Structures Complete..', 
+                        'Entering Security Console...', 
+                        'Encryption Unsuccesful Attempting Retry...', 
+                        'Waiting for response...', 
+                        '....Searching...', 
+                        'Calculating Space Requirements '
+                       ],
+           isProcessing = false,
+           processTime = 0,
+           lastProcess = 0;
+         
+         
+         function consoleOutput(){
+           var textEl = document.createElement('p');
+           
+           if(isProcessing){
+               textEl = document.createElement('span');
+               textEl.textContent += Math.random() + " ";
+               if(Date.now() > lastProcess + processTime){
+                   isProcessing = false;   
+               }
+           }else{
+               var commandType = ~~(Math.random()*4);
+               switch(commandType){
+                   case 0:
+                       textEl.textContent = commandStart[~~(Math.random()*commandStart.length)] + commandParts[~~(Math.random()*commandParts.length)];
+                       break;
+                   case 3: 
+                       isProcessing = true;
+                       processTime = ~~(Math.random()*5000);
+                       lastProcess = Date.now();
+                   default:
+                        textEl.textContent = commandResponses[~~(Math.random()*commandResponses.length)];
+                   break;
+               }
+           }
+         
+           outputConsole.scrollTop = outputConsole.scrollHeight;
+           outputConsole.appendChild(textEl);
+           
+           if (outputConsole.scrollHeight > window.innerHeight) {
+              var removeNodes = outputConsole.querySelectorAll('*');
+              for(var n = 0; n < ~~(removeNodes.length/3); n++){
+                   outputConsole.removeChild(removeNodes[n]);
+               }
+           }
+           
+           setTimeout(consoleOutput, ~~(Math.random()*200));
+         }
+         
+         
+         setTimeout(function(){         
+             outputConsole.style.height = (window.innerHeight / 3) * 2 + 'px';
+             outputConsole.style.top = window.innerHeight / 3 + 'px';
+         
+             consoleOutput();
+         }, 200);
+         
+         window.addEventListener('resize', function(){         
+             outputConsole.style.height = (window.innerHeight / 3) * 2 + 'px';
+             outputConsole.style.top = window.innerHeight / 3 + 'px';
+         });
+      </script>
+   </body>
+</html>
