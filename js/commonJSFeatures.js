@@ -1,9 +1,7 @@
 /* Logo Begins */
 document.getElementById("logoArea").innerHTML +=  "\
 	<div id=\"logos\">\
-		<!--<a target=\"_blank\" href=\"https://www.iiit.ac.in/\"><img src=\"./images/iiit.png\" alt=\"IIITH\"></a>-->\
 		<a id=\"SyPyRGLogo\" href=\"./index.html\"><img src=\"./images/SyPyRG.svg\" alt=\"SyPy\"></a>\
-		<!--<a target=\"_blank\" href=\"https://cstar.iiit.ac.in/\"><img src=\"./images/cstar.png\" alt=\"CSTAR\"></a>-->\
 	</div><br>\
 	<!--<center><h2>SyPy Security & Privacy Research Group</h2></center>-->\
 	";
