@@ -1,11 +1,8 @@
 /* Logo Begins */
 document.getElementById("logoArea").innerHTML +=  "\
 	<div id=\"logos\">\
-		<!--<a target=\"_blank\" href=\"https://www.iiit.ac.in/\"><img src=\"./images/iiit.png\" alt=\"IIITH\"></a>-->\
 		<a id=\"SyPyRGLogo\" href=\"./index.html\"><img src=\"./images/SyPyRG.svg\" alt=\"SyPy\"></a>\
-		<!--<a target=\"_blank\" href=\"https://cstar.iiit.ac.in/\"><img src=\"./images/cstar.png\" alt=\"CSTAR\"></a>-->\
 	</div><br>\
-	<!--<center><h2>SyPy Security & Privacy Research Group</h2></center>-->\
 	";
 /* Logo Ends */
 
@@ -38,13 +35,8 @@ document.getElementById("logoArea").innerHTML +=  "\
 /* ResponsiveMenu Ends */
 
 /* Footer Begins */
-	var update_date = "";
 	const today = new Date();
-	update_date = "July 05, 2025";
-
 	document.getElementById("footer").innerHTML +=  "\
-	<!--Last updated on " + update_date + "\
-	<br>-->\
 	SyPy\ &#169; " + today.getFullYear() + "\
 	<br>\
 	Vindhya A3, IIIT-H, 500032 Hyderabad, India\
